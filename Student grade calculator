@@ -1,0 +1,41 @@
+package studentgradecalculator;
+import java.util.Scanner;
+public class task2 
+{
+    public static void main(String args[])
+    {
+          int marks[]=new int[10];
+          float totalmarks=0,average;
+          Scanner sc =new Scanner(System.in);
+          int subjectnumber;
+          System.out.println("ENTER MARKS OBTAINED(OUT OF 100) IN EACH SUBJECT");
+          System.out.println("enter number of subjects");
+          subjectnumber=sc.nextInt();
+          for(int i=0;i<subjectnumber;i++)
+            {
+               System.out.print("Enter marks of subject"+(i+1)+":-");
+               marks[i]=sc.nextInt();
+               totalmarks=totalmarks+marks[i];
+            }
+                average=totalmarks/subjectnumber;
+                System.out.println("");
+                System.out.println("Total sum of marks is "+totalmarks);
+                System.out.println("Average of marks is "+average);
+                 if(average>=80)
+                {
+                    System.out.println("The student grade is A");
+                }
+                    else if(average>=60&&average<80)
+                    {
+                        System.out.println("The student grade is B");  
+                    }
+                    else if(average>=40&&average<60)
+                    {
+                        System.out.println("The student grade is c");
+                    }
+                        else
+                        {
+                            System.out.println("The student grade is D");
+                        }
+    }
+}
